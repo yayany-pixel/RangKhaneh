@@ -1,0 +1,14 @@
+# Netlify configuration for Rangkhaneh (Next.js 15 App Router).
+# The official Next.js runtime handles SSR, server actions, middleware,
+# and API routes. Do not switch this app to a static export — it relies
+# on server-rendered routes and cookies-based auth.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
